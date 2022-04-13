@@ -38,24 +38,25 @@ cat ~/.ssh/id_rsa.pub | ssh your_username@xacchead.d2.comp.nus.edu.sg "mkdir -p 
 
 ### Setting the FPGA Environment
 
+XACC clusters support the __Vitis Design Flow__. Benefiting from XRT environments and C/C++ based HLS tools, FPGA developlors can easy test their code in real hardware, and algorithm designers can ignore the hardware details. If you want to evaluate some RTL modules, we suggest you try the  mix programming with Vitis following [this](https://www.xilinx.com/developer/articles/Integrating-optimized-RTL-Kernels-into-Accelerated-Applications-using-Vitis.html)
+and [examples](https://github.com/Xilinx/Vitis_Accel_Examples/tree/master/rtl_kernels). 
+
+
 Users should then use the following command to setup the environment:
 ```shell
 # Set XRT Environment
 source /opt/xilinx/xrt/setup.sh
 # Set Vitis Environment, for the node installed Vitis 2020.1
 source  /opt/Xilinx/Vitis/2020.1/settings64.sh
-# Set Vitis Environment, for the node installed Vitis 2019.2
-source  /opt/Xilinx/Vitis/2019.2/settings64.sh
-# Set Vivado Environment, for the node installed Vivado 2020.1
-source  /opt/Xilinx/Vivado/2020.1/settings64.sh
-# Set Vivado Environment, for the node installed Vivado 2019.2
-source  /opt/Xilinx/Vivado/2019.2/settings64.sh
+
+# Set Vitis Environment, for the node installed Vitis 2020.2
+source  /opt/Xilinx/Vitis/2020.2/settings64.sh
 
 ```
 
 ### Shared Storage
 
-```/data``` is a shared path for all compute nodes for users to store insensitive data. 
+```/data``` is a shared path in all compute nodes for users to store insensitive data. 
 Please keep your data size within 50GB.
 
 ### Support
