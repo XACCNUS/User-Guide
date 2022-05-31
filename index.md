@@ -5,7 +5,7 @@
 ### Registration
 For researchers outside NUS, please request access through [Xilinx University Program](https://www.xilinx.com/support/university/XUP-XACC.html).
 
-For researchers at NUS, please apply through the following link: [NUS XACC Account Registration](https://forms.gle/fvfPgJypd1sSWzHm8).
+For researchers at NUS, please apply through the following link: [NUS HACC Account Registration](https://forms.gle/fvfPgJypd1sSWzHm8).
 
 The guest account expires after __one year__ or there is no login event within __two months__. You will get a notification from NUS of this event one month in advance. If you plan to keep using the resources, please follow the instruction in the notification mail.
 
@@ -64,7 +64,7 @@ Please keep your data size within 50GB.
 #### Cluster environment:
 If you need help (e.g., software installation), you can submit issues in [here](https://github.com/XACCNUS/Cluster/issues/new).
 
-You also can join our Telegram Group ([XACC@NUS Forum](https://t.me/joinchat/E3BBIyP9u16fTmmH)) for emergency help (e.g., registration problems).
+You also can join our Telegram Group ([HACC@NUS Forum](https://t.me/joinchat/E3BBIyP9u16fTmmH)) for emergency help (e.g., registration problems).
 
 #### Password reset:
 In case you forgot your account's password, you can email xacc.nus.user@gmail.com with the following information 
