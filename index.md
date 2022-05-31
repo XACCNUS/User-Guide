@@ -1,6 +1,6 @@
 
 
-## User Guide of XACC Cluster at NUS
+## User Guide of HACC Cluster at NUS
 
 ### Registration
 For researchers outside NUS, please request access through [Xilinx University Program](https://www.xilinx.com/support/university/XUP-XACC.html).
