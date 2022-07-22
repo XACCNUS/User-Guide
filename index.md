@@ -7,38 +7,31 @@ For researchers outside NUS, please request access through [Xilinx University Pr
 
 For researchers at NUS, please apply through the following link: [NUS HACC Account Registration](https://forms.gle/fvfPgJypd1sSWzHm8).
 
-The guest account expires after __one year__ or there is no login event within __two months__. You will get a notification from NUS of this event one month in advance. If you plan to keep using the resources, please follow the instruction in the notification mail.
+The user account expires after __one year__ or there is no login event within __two months__. You will get a notification from NUS of this event one month in advance. If you plan to keep using the resources, please follow the instruction in the notification mail.
 
 
 ### Compute Node Configuration
 
-|Host    | Boards |  Quantity | Shell Version | XRT Version | Vitis Version |
+|Compute Nodes    | Boards |  Quantity | Shell Version | XRT Version | Vitis Version |
 |--------|--------|-------|----------|-------------|-------------------|
-| xaccnode0.d2.comp.nus.edu.sg |  Alveo U250 | 2 | xilinx_u250_xdma_201830_2 | 2.7.766 | Vitis 2020.1 |
-| xaccnode1.d2.comp.nus.edu.sg |  Alveo U250 | 2 | xilinx_u250_xdma_201830_2 | 2.7.766 | Vitis 2020.1 |
-| xaccnode2.d2.comp.nus.edu.sg |  Alveo U280 | 4 | xilinx_u280_xdma_201920_1 | 2.5.309 | Vitis 2019.2 |
-| xaccnode3.d2.comp.nus.edu.sg |  Alveo U250 | 2 | xilinx_u250_qdma_201920_1 | 2.5.309 | Vitis 2019.2 |
+| xaccnode0 |  Alveo U250 | 2 | OpenNIC/internal test | 2.8.0 | Vitis 2020.2 |
+| xaccnode1 |  Alveo U250 | 2 | xilinx_u250_gen3x16_xdma_3_1_202020_1 | 2.13.466 | Vitis 2021.2 |
+| xaccnode2 |  Alveo U280 | 4 | xilinx_u280_xdma_201920_3 | 2.13.466 | Vitis 2021.2  |
+| xaccnode3 |  VCK5000/U250 | 1+1  | RTL Vivado Flow  | None| Vitis 2020.2  |
 
 ### Access to the Cluster
-Researchers at NUS could directly access the corresponding node with SSH: 
+
+Access through SSH: 
 ```shell
-ssh username@xaccnodex.d2.comp.nus.edu.sg
+ssh username@xacchead.d2.comp.nus.edu.sg
 ```
-Researchers outside NUS need to access a jump host (which has a public IP address) at first before accessing the servers with FPGA boards. 
 
-__NOTE__: we highly recommand you to enable the SSH key based secure authentication. You can refer the following command.
-
-``` shell
-# make sure you already generated ssh key by ssh-keygen
-# replace "your_username" to your given account
-cat ~/.ssh/id_rsa.pub | ssh your_username@xacchead.d2.comp.nus.edu.sg "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 700 ~/.ssh  && chmod 600 ~/.ssh/authorized_keys" 
-
-```
+Please following the instructions in the email that contains your account's information to set up the 2FA authentication.
 
 
 ### Setting the FPGA Environment
 
-XACC clusters support the __Vitis Design Flow__. Benefiting from XRT environments and C/C++ based HLS tools, FPGA developlors can easy test their code in real hardware, and algorithm designers can ignore the hardware details. If you want to evaluate some RTL modules, we suggest you try the  mix programming with Vitis following [this](https://www.xilinx.com/developer/articles/Integrating-optimized-RTL-Kernels-into-Accelerated-Applications-using-Vitis.html)
+XACC clusters now only support the __Vitis Design Flow__. Benefiting from XRT environments and C/C++ based HLS tools, FPGA developlors can easy test their code in real hardware, and algorithm designers can ignore the hardware details. If you want to evaluate some RTL modules, we suggest you try the  mix programming with Vitis following [this](https://www.xilinx.com/developer/articles/Integrating-optimized-RTL-Kernels-into-Accelerated-Applications-using-Vitis.html)
 and [examples](https://github.com/Xilinx/Vitis_Accel_Examples/tree/master/rtl_kernels). 
 
 
@@ -46,17 +39,19 @@ Users should then use the following command to setup the environment:
 ```shell
 # Set XRT Environment
 source /opt/xilinx/xrt/setup.sh
-# Set Vitis Environment, for the node installed Vitis 2020.1
-source  /opt/Xilinx/Vitis/2020.1/settings64.sh
-
-# Set Vitis Environment, for the node installed Vitis 2020.2
-source  /opt/Xilinx/Vitis/2020.2/settings64.sh
+# Set Vitis Environment, for the node installed Vitis 2021.2
+source  /opt/Xilinx/Vitis/2021.2/settings64.sh
 
 ```
 
+
+### Slurm usage
+
+Please following [this](https://xaccnus.github.io/Job-Scheduler/) on how to write a Slurm job to utlize FPGAs.
+
 ### Shared Storage
 
-```/data``` is a shared path in all compute nodes for users to store insensitive data. 
+```/data``` is a shared path in all compute nodes for users to store __insensitive__ data. 
 Please keep your data size within 50GB.
 
 ### Support
