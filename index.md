@@ -19,7 +19,10 @@ The user account expires after __one year__ or there is no login event within __
 | xaccnode2 |  Alveo U280 | 4 | xilinx_u280_xdma_201920_3 | 2.13.466 | Vitis 2021.2  |
 | xaccnode3 |  VCK5000/U250 | 1+1  | RTL Vivado Flow  | None| Vitis 2020.2  |
 
-### Access to the Cluster
+
+### Usage
+
+#### Access to the Cluster
 
 Access through SSH: 
 ```shell
@@ -29,7 +32,7 @@ ssh username@xacchead.d2.comp.nus.edu.sg
 Please following the instructions in the email that contains your account's information to set up the 2FA authentication.
 
 
-### Setting the FPGA Environment
+#### Setup FPGA Compilation Environment
 
 XACC clusters now only support the __Vitis Design Flow__. Benefiting from XRT environments and C/C++ based HLS tools, FPGA developlors can easy test their code in real hardware, and algorithm designers can ignore the hardware details. If you want to evaluate some RTL modules, we suggest you try the  mix programming with Vitis following [this](https://www.xilinx.com/developer/articles/Integrating-optimized-RTL-Kernels-into-Accelerated-Applications-using-Vitis.html)
 and [examples](https://github.com/Xilinx/Vitis_Accel_Examples/tree/master/rtl_kernels). 
@@ -45,9 +48,11 @@ source  /opt/Xilinx/Vitis/2021.2/settings64.sh
 ```
 
 
-### Slurm usage
+#### Run FPGA code with Slurm
 
 Please following [this](https://xaccnus.github.io/Job-Scheduler/) on how to write a Slurm job to utlize FPGAs.
+
+
 
 ### Shared Storage
 
