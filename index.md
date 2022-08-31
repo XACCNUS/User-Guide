@@ -2,7 +2,7 @@
 
 ## User Guide of HACC Cluster at NUS
 
-### Registration
+### I. Registration
 For researchers outside NUS, please request access through [Xilinx University Program](https://www.xilinx.com/support/university/XUP-XACC.html).
 
 For researchers at NUS, please apply through the following link: [NUS HACC Account Registration](https://forms.gle/fvfPgJypd1sSWzHm8).
@@ -10,7 +10,9 @@ For researchers at NUS, please apply through the following link: [NUS HACC Accou
 The user account expires after __one year__ or there is no login event within __two months__. You will get a notification from NUS of this event one month in advance. If you plan to keep using the resources, please follow the instruction in the notification mail.
 
 
-### Compute Node Configuration
+### II. Compute Node Configuration
+
+We have the following FPGA boards.
 
 |Compute Nodes    | Boards |  Quantity | Shell Version | XRT Version | Vitis Version |
 |--------|--------|-------|----------|-------------|-------------------|
@@ -20,9 +22,9 @@ The user account expires after __one year__ or there is no login event within __
 | xaccnode3 |  VCK5000/U250 | 1+1  | RTL Vivado Flow  | None| Vitis 2020.2  |
 
 
-### Usage
+### III. Usage
 
-#### Access to the Cluster
+#### a) Access the cluster
 
 Access through SSH: 
 ```shell
@@ -32,7 +34,7 @@ ssh username@xacchead.d2.comp.nus.edu.sg
 Please following the instructions in the email that contains your account's information to set up the 2FA authentication.
 
 
-#### Setup FPGA Compilation Environment
+#### b) Setup FPGA compilation environment
 
 XACC clusters now only support the __Vitis Design Flow__. Benefiting from XRT environments and C/C++ based HLS tools, FPGA developlors can easy test their code in real hardware, and algorithm designers can ignore the hardware details. If you want to evaluate some RTL modules, we suggest you try the  mix programming with Vitis following [this](https://www.xilinx.com/developer/articles/Integrating-optimized-RTL-Kernels-into-Accelerated-Applications-using-Vitis.html)
 and [examples](https://github.com/Xilinx/Vitis_Accel_Examples/tree/master/rtl_kernels). 
@@ -48,18 +50,25 @@ source  /opt/Xilinx/Vitis/2021.2/settings64.sh
 ```
 
 
-#### Run FPGA code with Slurm
+#### c) Run FPGA accelerated tasks with Slurm
 
-Please following [this](https://xaccnus.github.io/Job-Scheduler/) on how to write a Slurm job to utlize FPGAs.
+Please following [this](https://xaccnus.github.io/Job-Scheduler/) on how to write a Slurm job to utilize FPGAs.
 
 
 
-### Shared Storage
+#### d) Use the shared storage
 
 ```/data``` is a shared path in all compute nodes for users to store __insensitive__ data. 
 Please keep your data size within 50GB.
 
-### Support
+
+#### e) Setup VNC for the visualization of waveform simulation
+
+We have installed VNC server in our cluster for a better experience on waveform-based FPGA simulation. To enable it,
+please follow [this](https://xaccnus.github.io/Job-Scheduler/vnc_setup) to setup the VNC service for your account. 
+
+
+### IV. Support
 
 #### Cluster environment:
 If you need help (e.g., software installation), you can submit issues in [here](https://github.com/XACCNUS/Cluster/issues/new).
@@ -73,5 +82,15 @@ Subject: Reset password
 Context:  Account: your_username
 
 
-### Acknowledgement
+### V. Acknowledgement
 We would like to thank [Xilinx](https://www.xilinx.com/) for the hardware donation.
+
+
+##### HACC acknowledgment
+
+AMD encourages HACC users to acknowledge AMD’s support of your research in your presentations, papers, posters, and press releases. A brief statement such as the one below is recommended.
+
+##### Example of acknowledgment
+
+> This work was supported in part by AMD under the Heterogeneous Accelerated Compute Clusters (HACC) program (formerly known as the XACC program - Xilinx Adaptive Compute Cluster program).
+
