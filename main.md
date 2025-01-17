@@ -14,16 +14,16 @@ The user account expires after __one year__ or there is no login event within __
 
 We have the following FPGA boards.
 
-<img src="fig/hacc.png" alt="drawing" width="800"/>
+<img src="fig/xacc_nus.PNG" alt="drawing" width="800"/>
 
 |GPU/FPGA Cluster   |  Hardware Setup| Shell/Arch Version | XRT Version | Toolchain Version|
 |-------------------|----------------|--------------------|-------------|-------------------|
 | GPU/FPGA Cluster   |  VCK5000 x2   | xilinx_vck5000_gen4x8_qdma_2_202220_1 | 2.14.384  | Vitis 2022.2 |
 |  | U55C x6  | xilinx_u55c_gen3x16_xdma_3_202210_1 | 2.14.384   | Vitis 2022.2 |
 |  | MI210 x12    | gfx90a  | -   | ROCm-5.1.0 |
-| U250 Cluster  | Alveo U250 x4    | xilinx_u250_gen3x16_xdma_3_1_202020_1  | 2.14.354   | Vitis 2021.2 |
-| U280 Cluster | Alveo U280 x4   | xilinx_u280_xdma_201920_3  | 2.14.354    | Vitis 2021.2 |
-| VCK5000 Cluster  | VCK5000 x4     | xilinx_vck5000_gen4x8_qdma_2_202220_1     |2.14.384   | Vitis 2022.2 |
+| U250 Cluster  | Alveo U250 x6    | xilinx_u250_gen3x16_xdma_3_1_202020_1  | 2.14.354   | Vitis 2021.2 |
+| U280 Cluster | Alveo U280 x2   | xilinx_u280_xdma_201920_3  | 2.14.354    | Vitis 2021.2 |
+| VCK5000 Cluster  | VCK5000 x2     | xilinx_vck5000_gen4x8_qdma_2_202220_1     |2.14.384   | Vitis 2022.2 |
 | U50 Single Node | Alveo U50 x1   | xilinx_u50_gen3x16_xdma_201920_3  | 2.14.354    | Vitis 2021.2 |
 | GPU Cluster | MI25 x8   | gfx906  | -  | ROCm-5.1.0 |
 
